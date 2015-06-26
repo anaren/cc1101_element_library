@@ -1,0 +1,21 @@
+{
+	"type": "Embedded Library",
+	"label": "CC1101 Driver",
+	"language": {
+		"en": {
+			"label": "CC1101 Driver"
+		}
+	},
+	"name": "cc1101",
+	"author": "Anaren Inc.",
+	"signature": "",
+	"version": "1.0.0",
+	
+	"code": {
+		"global" : "#include cc1101/cc1101.h",
+		"setup" : "TMP006_SetDataReadyEnable(0, 1);" 
+	},
+	
+	"elements": {
+	}
+}
