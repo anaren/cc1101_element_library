@@ -73,7 +73,7 @@ if os.path.isdir(driver_path):
 				driver_data['elements'][element_name]['code'] = element_code
 				
 				try:
-					icon_file = open('%(driver_path)s/element_code/%(element_name)s.png' % {'driver_path':driver_path, 'element_name':element_name}, 'r')
+					icon_file = open('%(driver_path)s/element_code/%(element_name)s.png' % {'driver_path':driver_path, 'element_name':element_name}, 'rb')
 					driver_data['elements'][element_name]['icon'] = 'data:image/png;base64,' + icon_file.read().encode('base64')
 					icon_file.close()
 					
