@@ -247,6 +247,18 @@
 
 #define CC1101_MAX_TIMEOUT        2000
 
+#ifndef bool
+#define bool unsigned char
+#endif
+
+#ifndef true
+#define true 1
+#endif
+
+#ifndef false
+#define false 0
+#endif
+ 
 enum CC1101_Error
 {
     CC1101_ErrorTimeout     = 0x01u,
