@@ -65,7 +65,7 @@ unsigned char CC1101_GetTxFifoCount()
 	return CC1101_GetRegister(CC1101_TXBYTES);
 }
 
-CC1101_MarcState CC1101_GetMarcState()
+enum CC1101_MarcState CC1101_GetMarcState()
 {
 	(enum CC1101_MarcState)CC1101_GetRegister(CC1101_MARCSTATE);
 }
@@ -135,6 +135,16 @@ void CC1101_Nop()
 	CC1101_Write((CC1101_SNOP & 0xBF), NULL, 0);
 }
 
+void CC1101_WaitForSyncSent()
+{
+	return;
+}
+
+void CC1101_WaitForTransmitComplete()
+{
+	return;
+}
+
 unsigned char CC1101_GetRegisterWithSpiSyncProblem( unsigned char address)
 {
 	unsigned char i;
@@ -187,7 +197,6 @@ bool CC1101_SetAndVerifyState(unsigned char command, enum CC1101_MarcState state
 void CC1101_Init()
 {
 	bCC1101Sleep = false;
-	CC1101_SPI_Init();
 }
 
 bool CC1101_Configure(const struct sCC1101 *config)
