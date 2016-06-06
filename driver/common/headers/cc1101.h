@@ -365,7 +365,7 @@ unsigned char CC1101_GetRxFifoCount();
 
 unsigned char CC1101_GetTxFifoCount();
 
-CC1101_MarcState CC1101_GetMarcState();
+enum CC1101_MarcState CC1101_GetMarcState();
 
 unsigned char CC1101_GetRssi();
 
